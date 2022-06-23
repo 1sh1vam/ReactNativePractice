@@ -6,7 +6,6 @@ import {
   Button,
   TextInput,
   FlatList,
-  ScrollView,
 } from 'react-native';
 
 export default function App() {
@@ -19,7 +18,7 @@ export default function App() {
 
   const addGoal = () => {
     console.log('add btn clicke', text);
-    setGoalList((prev) => [...prev, text]);
+    setGoalList((prev) => [...prev, {text, key: prev.length + 1}]);
     setText('');
   };
 
@@ -39,7 +38,7 @@ export default function App() {
           data={goalList}
           renderItem={(itemData) => (
             <View style={styles.goalItem}>
-              <Text style={styles.goalText}>{itemData.item}</Text>
+              <Text style={styles.goalText}>{itemData.item.text}</Text>
             </View>
           )}
           alwaysBounceVertical={false}
