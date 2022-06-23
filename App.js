@@ -23,8 +23,8 @@ export default function App() {
       </View>
       <ScrollView style={styles.goalsContainer}>
         {goalList.map((goal, index) => (
-          <View key={index} style={styles.goalText} >
-            <Text>{goal}</Text>
+          <View key={index} style={styles.goalItem} >
+            <Text style={styles.goalText}>{goal}</Text>
           </View>
         ))}
       </ScrollView>
@@ -57,11 +57,13 @@ const styles = StyleSheet.create({
   goalsContainer: {
     flex: 8,
   },
-  goalText: {
+  goalItem: {
     padding: 15,
     borderRadius: 10,
     backgroundColor: '#2D5C54',
-    color: '#fff',
     margin: 5,
+  },
+  goalText: {
+    color: '#fff',
   }
 });
