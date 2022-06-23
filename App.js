@@ -21,13 +21,15 @@ export default function App() {
         <TextInput onChangeText={handleGoalInp} value={text} placeholder='Your course goal!' style={styles.textInput} />
         <Button onPress={addGoal} title='Add Goal' />
       </View>
-      <ScrollView style={styles.goalsContainer}>
-        {goalList.map((goal, index) => (
-          <View key={index} style={styles.goalItem} >
-            <Text style={styles.goalText}>{goal}</Text>
-          </View>
-        ))}
-      </ScrollView>
+      <View style={styles.goalsContainer}>
+        <ScrollView>
+          {goalList.map((goal, index) => (
+            <View key={index} style={styles.goalItem} >
+              <Text style={styles.goalText}>{goal}</Text>
+            </View>
+          ))}
+        </ScrollView>
+      </View>
     </View>
   );
 }
