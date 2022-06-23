@@ -18,7 +18,7 @@ export default function App() {
 
   const addGoal = () => {
     console.log('add btn clicke', text);
-    setGoalList((prev) => [...prev, {text, key: prev.length + 1}]);
+    setGoalList((prev) => [...prev, {text, id: prev.length + 1}]);
     setText('');
   };
 
@@ -41,6 +41,7 @@ export default function App() {
               <Text style={styles.goalText}>{itemData.item.text}</Text>
             </View>
           )}
+          keyExtractor={(item, index) => item.id}
           alwaysBounceVertical={false}
         />
       </View>
