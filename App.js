@@ -22,7 +22,11 @@ export default function App() {
         <Button onPress={addGoal} title='Add Goal' />
       </View>
       <ScrollView style={styles.goalsContainer}>
-        {goalList.map((goal, index) => <Text style={styles.goalText} key={index}>{goal}</Text>)}
+        {goalList.map((goal, index) => (
+          <View key={index} style={styles.goalText} >
+            <Text>{goal}</Text>
+          </View>
+        ))}
       </ScrollView>
     </View>
   );
