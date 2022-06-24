@@ -14,7 +14,7 @@ const GoalItem = ({ text, id, deleteItem }) => {
 const styles = StyleSheet.create({
     goalItem: {
         borderRadius: 10,
-        backgroundColor: '#2D5C54',
+        backgroundColor: '#5e0aac',
         margin: 5,
       },
       goalText: {

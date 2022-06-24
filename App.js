@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Button onPress={() => setShowModal(true)} title='Add new goal!' color="#2187ab" />
+      <Button onPress={() => setShowModal(true)} title='Add new goal!' color="#6f6aac" />
       <GoalInput visible={showModal} closeModal={closeModal} addGoal={addGoal} />
       <View style={styles.goalsContainer}>
         <FlatList
@@ -45,6 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 50,
     paddingHorizontal: 16,
+    backgroundColor: '#1e085a'
   },
   goalsContainer: {
     flex: 8,
