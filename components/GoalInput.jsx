@@ -21,7 +21,14 @@ const GoalInput = ({ addGoal }) => {
             placeholder="Your course goal!"
             style={styles.textInput}
         />
-        <Button onPress={handleAddGoal} title="Add Goal" />
+        <View style={styles.buttonContainer}>
+            <View style={styles.addButton}>
+                <Button onPress={handleAddGoal} title="Add Goal" />
+            </View>
+            <View>
+                <Button onPress={handleAddGoal} title="Cancel" />
+            </View>
+        </View>
         </View>
     </Modal>
   );
@@ -43,6 +50,15 @@ const styles = StyleSheet.create({
     padding: 8,
     marginRight: 8,
   },
+  buttonContainer: {
+    marginTop: 20,
+    width: '40%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  addButton: {
+
+  }
 });
 
 export default GoalInput;
