@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
         color: '#fff',
       },
       pressable: {
-        backgroundColor: '#3ae056',
         opacity: 0.5,
       }
 })
