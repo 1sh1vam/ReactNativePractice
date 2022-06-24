@@ -25,7 +25,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Button onPress={() => setShowModal(true)} title='Add new goal!' color="#2187ab" />
-      {showModal && <GoalInput closeModal={closeModal} addGoal={addGoal} />}
+      <GoalInput visible={showModal} closeModal={closeModal} addGoal={addGoal} />
       <View style={styles.goalsContainer}>
         <FlatList
           data={goalList}
