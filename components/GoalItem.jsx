@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, View, Text, Pressable } from 'react-native'
 
-const GoalItem = ({ text }) => {
+const GoalItem = ({ text, id, deleteItem }) => {
   return (
     <View style={styles.goalItem}>
-    <Pressable style={({ pressed }) => pressed && styles.pressable}>
+    <Pressable onPress={() => deleteItem(id)} style={({ pressed }) => pressed && styles.pressable}>
         <Text style={styles.goalText}>{text}</Text>
     </Pressable>
     </View>
