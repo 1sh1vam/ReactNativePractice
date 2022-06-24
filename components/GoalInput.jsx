@@ -24,10 +24,10 @@ const GoalInput = ({ visible, addGoal, closeModal }) => {
         />
         <View style={styles.buttonContainer}>
             <View style={styles.button}>
-                <Button onPress={handleAddGoal} title="Add Goal" />
+                <Button onPress={handleAddGoal} title="Add Goal" color="#b180f0" />
             </View>
             <View style={styles.button}>
-                <Button onPress={closeModal} title="Cancel" />
+                <Button onPress={closeModal} title="Cancel" color="#f31282" />
             </View>
         </View>
         </View>
