@@ -12,9 +12,12 @@ export default function App() {
   const [goalList, setGoalList] = useState([]);
   const [showModal, setShowModal] = useState(false);
 
+  const closeModal = () => setShowModal(false);
+
   const addGoal = (text) => {
     console.log('add btn clicke', text);
     setGoalList((prev) => [...prev, {text, id: prev.length + 1}]);
+    closeModal();
   };
 
   const deleteItem = (id) => setGoalList((prev) => prev.filter((goal) => goal.id !== id));
@@ -22,7 +25,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Button onPress={() => setShowModal(true)} title='Add new goal!' color="#2187ab" />
-      {showModal && <GoalInput addGoal={addGoal} />}
+      {showModal && <GoalInput closeModal={closeModal} addGoal={addGoal} />}
       <View style={styles.goalsContainer}>
         <FlatList
           data={goalList}
