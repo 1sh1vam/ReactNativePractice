@@ -7,6 +7,11 @@ const GoalInput = ({ addGoal }) => {
   const handleGoalInp = (enteredText) => {
     setText(enteredText);
   };
+
+  const handleAddGoal = () => {
+    addGoal(text);
+    setText('');
+  }
   return (
     <View style={styles.inputContainer}>
       <TextInput
@@ -15,7 +20,7 @@ const GoalInput = ({ addGoal }) => {
         placeholder="Your course goal!"
         style={styles.textInput}
       />
-      <Button onPress={() => addGoal(text)} title="Add Goal" />
+      <Button onPress={handleAddGoal} title="Add Goal" />
     </View>
   );
 };
