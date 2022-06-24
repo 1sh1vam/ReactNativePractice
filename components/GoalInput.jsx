@@ -9,6 +9,7 @@ const GoalInput = ({ visible, addGoal, closeModal }) => {
   };
 
   const handleAddGoal = () => {
+    if (!text) return;
     addGoal(text);
     setText('');
   }
