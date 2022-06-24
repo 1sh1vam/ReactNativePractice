@@ -15,6 +15,7 @@ const GoalInput = ({ visible, addGoal, closeModal }) => {
   return (
     <Modal visible={visible} animationType='slide'>
         <View style={styles.inputContainer}>
+        <Image style={styles.image} source={require('../assets/images/target.gif')} />
         <TextInput
             onChangeText={handleGoalInp}
             value={text}
@@ -56,6 +57,11 @@ const styles = StyleSheet.create({
   button: {
     width: 100,
     marginHorizontal: 16,
+  },
+  image: {
+    width: 150,
+    height: 150,
+    margin: 20,
   }
 });
 
